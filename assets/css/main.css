@@ -94,10 +94,20 @@ body {
 .max2000{max-width: 2000px;}
 
 
-.bot-brd {border-bottom: var(--general-accent) solid 1px;}
-.top-brd {border-top: var(--general-accent) solid 1px;}
-.l-brd {border-left: var(--general-accent) solid 1px;}
-.r-brd {border-right: var(--general-accent) solid 1px;}
+.bot-brd {border-bottom: var(--general-gray) solid 1px;}
+.top-brd {border-top: var(--general-gray) solid 1px;}
+.l-brd {border-left: var(--general-gray) solid 1px;}
+.r-brd {border-right: var(--general-gray) solid 1px;}
+
+.btn-main {
+    background-color: var(--general-accent);
+    border: none;
+    color: var(--bg-body);
+}
+.btn-main:hover {
+    transition: all 0.17s ease-in-out;
+    filter: invert(10%);
+}
 
 .general-padding {padding: 15px;}
 .general-margin {margin: 15px;}
@@ -134,9 +144,14 @@ body {
     padding: 2px;
 }
 .colors {overflow-y: auto;}
-.color-bg:hover {
+.colors:hover .color-bg {
+    transition: all 0.17s ease-in-out;
+    filter: blur(4px);
+}
+.colors .color-bg:hover {
     transition: all 0.17s ease-in-out;
     width: 130%;
+    filter: blur(0px);
 }
 @media (max-width:1200px) {
     .color-container {

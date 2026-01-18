@@ -54,7 +54,7 @@ function fetchApi(path) {
                                 <h1 class="capitalize">${len.name}</h1>
                                 <div class="row jcsb w100">
                                     <h3 class="capitalize">type: ${len.type}</h3>
-                                    <h3 class="capitalize">ID: ${len.colorId}</h3>    
+                                    <h3 class="capitalize">ID: ${len.paletteId}</h3>    
                                 </div>
                             </div>
                         </div>

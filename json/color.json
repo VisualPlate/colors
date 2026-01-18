@@ -1,6 +1,6 @@
 [
     {
-        "colorId": 1,
+        "paletteId": 1,
         "hex": [
             "#D97A52",
             "#D99152",
@@ -12,7 +12,7 @@
         "type": "colorful"
     },
     {
-        "colorId": 2,
+        "paletteId": 2,
         "hex": [
             "#111113",
             "#161616",
@@ -24,7 +24,7 @@
         "type": "dark"
     },
     {
-        "colorId": 3,
+        "paletteId": 3,
         "hex": [
             "#D952C5",
             "#B852D9",
