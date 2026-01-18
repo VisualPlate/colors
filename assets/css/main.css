@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-weight: 100;
+    z-index: 5;
+}
+img {
+    position: absolute;
+    z-index: 6;
 }
 html, body {height: 100%;}
 h1,h2,h3,h4,h5,h6 {color: var(--color-primary);}
@@ -39,8 +44,14 @@ body {
 .h1000p {height: 1000px;}
 .h800p {height: 800px;}
 .h600p {height: 600px;}
+.h500p {height: 600px;}
 .h400p {height: 400px;}
-.h600p {height: 600px;}
+.h300p {height: 300px;}
+.h200p {height: 200px;}
+.h100p {height: 100px;}
+.h80p {height: 80px;}
+.h60p {height: 60px;}
+.h40p {height: 40px;}
 
 .fs64 {font-size: 64px;}
 .fs58 {font-size: 58px;}
@@ -91,7 +102,15 @@ body {
 .general-padding {padding: 15px;}
 .general-margin {margin: 15px;}
 .general-brd-rad {border-radius: 15px;}
+.general-gap {gap: 15px;}
 
+.top-nav {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-container);
+}
 .container-content {
     display: flex;
     flex-direction: row;
@@ -115,6 +134,10 @@ body {
     padding: 2px;
 }
 .colors {overflow-y: auto;}
+.color-bg:hover {
+    transition: all 0.17s ease-in-out;
+    width: 130%;
+}
 @media (max-width:1200px) {
     .color-container {
         width: calc(100% - 30px);
