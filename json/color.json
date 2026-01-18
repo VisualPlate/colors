@@ -1,0 +1,37 @@
+[
+    {
+        "colorId": 1,
+        "hex": [
+            "#D97A52",
+            "#D99152",
+            "#D9A652",
+            "#D9B752",
+            "#DAD4AE"
+        ],
+        "name": "warm tones",
+        "type": "colorful"
+    },
+    {
+        "colorId": 2,
+        "hex": [
+            "#111113",
+            "#161616",
+            "#1c1c20",
+            "#385888",
+            "#D8D8D8"
+        ],
+        "name": "Modern dark",
+        "type": "dark"
+    },
+    {
+        "colorId": 3,
+        "hex": [
+            "#D952C5",
+            "#B852D9",
+            "#8076DC",
+            "#C99BD9"
+        ],
+        "name": "neon purples",
+        "type": "colorful"
+    }
+]
