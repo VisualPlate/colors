@@ -163,6 +163,11 @@ body {
     top: 22px;
     width: 40px;
 }
+@media (min-width:1600px) {
+    #btnThemeChange {
+        right: 100px;
+    }
+}
 @media (max-width:1200px) {
     .color-container {
         width: calc(100% - 30px);
