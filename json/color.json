@@ -33,5 +33,52 @@
         ],
         "name": "neon purples",
         "type": "colorful"
+    },
+    {
+        "paletteId": 4,
+        "hex": [
+            "#0A0A0A",
+            "#281F29",
+            "#3F3642",
+            "#5A4F5C",
+            "#726579"
+        ],
+        "name": "shadow darks",
+        "type": "dark"
+    },
+    {
+        "paletteId": 5,
+        "hex": [
+            "#49828D",
+            "#79A035",
+            "#87B143",
+            "#72A773",
+            "#001705"
+        ],
+        "name": "green fade",
+        "type": "colorful"
+    },
+    {
+        "paletteId": 6,
+        "hex": [
+            "#E0E0E0",
+            "#A8C4EB",
+            "#7FA5D6",
+            "#5178B1",
+            "#1A4780"
+        ],
+        "name": "cool ice",
+        "type": "colorful"
+    },
+    {
+        "paletteId": 7,
+        "hex": [
+            "#00292F",
+            "#01232D",
+            "#000C18",
+            "#04635F"
+        ],
+        "name": "greenish dark",
+        "type": "dark"
     }
 ]
