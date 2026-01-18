@@ -102,7 +102,7 @@ body {
 .btn-main {
     background-color: var(--general-accent);
     border: none;
-    color: var(--bg-body);
+    color: var(--color-primary);
 }
 .btn-main:hover {
     transition: all 0.17s ease-in-out;
@@ -152,6 +152,16 @@ body {
     transition: all 0.17s ease-in-out;
     width: 130%;
     filter: blur(0px);
+}
+#srcTerm {
+    background-color: var(--bg-container);
+    color: var(--color-primary);
+}
+#btnThemeChange {
+    position: fixed;
+    right: 22px;
+    top: 22px;
+    width: 40px;
 }
 @media (max-width:1200px) {
     .color-container {
