@@ -6,6 +6,11 @@
     transition: all 0.3s ease;
     cursor: pointer;
 }
+.upload-container:hover {
+    background-color: var(--bg-container-h);
+    border: var(--text-primary) solid 1px;
+    
+}
 
 .upload-container.dragover {
     border: var(--text-primary) solid 1px;

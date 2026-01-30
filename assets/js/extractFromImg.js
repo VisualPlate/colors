@@ -108,7 +108,7 @@ function extractColors() {
 function kMeansClustering(pixels, k) {
     const sampledPixels = [];
     const step = 4;
-    
+
     for (let i = 0; i < pixels.length; i += step * 4) {
         sampledPixels.push({
             r: pixels[i],
@@ -119,44 +119,57 @@ function kMeansClustering(pixels, k) {
 
     let centroids = [];
     for (let i = 0; i < k; i++) {
-        const randomPixel = sampledPixels[Math.floor(Math.random() * sampledPixels.length)];
-        centroids.push({ ...randomPixel });
+        const p = sampledPixels[Math.floor(Math.random() * sampledPixels.length)];
+        centroids.push({ ...p });
     }
 
-    const maxIterations = 10;
+    const maxIterations = 15;
+    const epsilon = 1;
+
     for (let iter = 0; iter < maxIterations; iter++) {
         const clusters = Array.from({ length: k }, () => []);
-        
+
         sampledPixels.forEach(pixel => {
             let minDist = Infinity;
-            let closestCentroid = 0;
-            
-            centroids.forEach((centroid, idx) => {
-                const dist = colorDistance(pixel, centroid);
-                if (dist < minDist) {
-                    minDist = dist;
-                    closestCentroid = idx;
+            let closest = 0;
+
+            for (let i = 0; i < k; i++) {
+                const d = colorDistance(pixel, centroids[i]);
+                if (d < minDist) {
+                    minDist = d;
+                    closest = i;
                 }
-            });
-            
-            clusters[closestCentroid].push(pixel);
+            }
+
+            clusters[closest].push(pixel);
         });
-        
-        centroids = clusters.map(cluster => {
-            if (cluster.length === 0) return centroids[0];
-            
-            const sum = cluster.reduce((acc, pixel) => ({
-                r: acc.r + pixel.r,
-                g: acc.g + pixel.g,
-                b: acc.b + pixel.b
-            }), { r: 0, g: 0, b: 0 });
-            
-            return {
-                r: Math.round(sum.r / cluster.length),
-                g: Math.round(sum.g / cluster.length),
-                b: Math.round(sum.b / cluster.length)
+
+        let converged = true;
+
+        centroids = clusters.map((cluster, i) => {
+            if (cluster.length === 0) return centroids[i];
+
+            let r = 0, g = 0, b = 0;
+            for (const p of cluster) {
+                r += p.r;
+                g += p.g;
+                b += p.b;
+            }
+
+            const newCentroid = {
+                r: Math.round(r / cluster.length),
+                g: Math.round(g / cluster.length),
+                b: Math.round(b / cluster.length)
             };
+
+            if (colorDistance(newCentroid, centroids[i]) > epsilon) {
+                converged = false;
+            }
+
+            return newCentroid;
         });
+
+        if (converged) break;
     }
 
     return centroids;
