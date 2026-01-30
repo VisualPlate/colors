@@ -21,8 +21,8 @@ body {
     color: var(--color-secondary);
     min-width: 300px;
 }
-.row,.col {display: flex;}
-.row {flex-direction: row;}
+.row,.col,.row-dyna {display: flex;}
+.row,.row-dyna {flex-direction: row;}
 .col {flex-direction: column;}
 .w100{width: 100%;}
 .w50{width: 50%;}
@@ -44,7 +44,7 @@ body {
 .h1000p {height: 1000px;}
 .h800p {height: 800px;}
 .h600p {height: 600px;}
-.h500p {height: 600px;}
+.h500p {height: 500px;}
 .h400p {height: 400px;}
 .h300p {height: 300px;}
 .h200p {height: 200px;}
@@ -114,6 +114,10 @@ body {
 .general-brd-rad {border-radius: 15px;}
 .general-gap {gap: 15px;}
 
+.g15 {
+    gap: 15px;
+}
+
 .top-nav {
     position: fixed;
     z-index: 1000;
@@ -128,6 +132,14 @@ body {
     margin: 0 auto;
     align-self: center;
     gap: 15px;
+}
+.content-container {
+    width: 100%;
+    margin-inline: 15px;
+    min-height: 200px;
+    background-color: var(--bg-container);
+    border: var(--general-gray) solid 1px;
+    margin-bottom: 15px;
 }
 .color-container {
     width: 500px;
@@ -179,4 +191,5 @@ body {
     .color-header {
         font-size: 22px;
     }
+    .row-dyna {flex-direction: column;}
 }

@@ -1,0 +1,126 @@
+.upload-container {
+    background-color: var(--bg-container);
+    border: var(--general-gray) solid 1px;
+    text-align: center;
+    padding: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-container.dragover {
+    border: var(--text-primary) solid 1px;
+    background: var(--bg-container-h);
+    transform: scale(1.02);
+}
+
+#fileInput {
+    display: none;
+}
+
+input[type="number"] {
+    background-color: var(--bg-container);
+    border: var(--general-gray) solid 1px;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border: var(--color-primary) solid 1px;
+}
+
+button {
+    background-color: var(--general-accent);
+    border: var(--general-gray) solid 1px;
+    color: var(--color-primary);
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+button:hover {
+    background-color: var(--general-accent-h);
+}
+
+button:disabled {
+    background: var(--bg-container);
+    color: var(--color-secondary);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.palette-section {
+    margin-top: 30px;
+}
+
+.palette-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.color-card {
+    background-color: var(--bg-container);
+    border: var(--general-gray) solid 1px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.color-card:hover {
+    box-shadow: 0 8px 20px rgba(92, 92, 92, 0.15);
+    scale: 1.1;
+}
+
+.color-swatch {
+    height: 100px;
+    width: 100%;
+}
+
+.color-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.color-hex {
+    font-weight: 400;
+    color: var(--color-primary);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.color-rgb {
+    font-size: 18px;
+    color: var(--color-secondary);
+}
+
+.copied-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--general-accent);
+    color: var(--color-primary);
+    border: var(--general-gray) solid 1px;
+    padding: 15px 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.copied-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.loading {
+    text-align: center;
+    color: var(--color-primary);
+    display: none;
+}
+
+.loading.show {
+    display: block;
+}

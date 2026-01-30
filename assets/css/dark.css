@@ -1,9 +1,11 @@
 :root {
     --bg-body:#1f1f1f;
     --bg-container:#303030;
+    --bg-container-h:#414040;
 
     --general-gray:#a0a0a0a4;
     --general-accent:#517bbb;
+    --general-accent-h:#859dc4;
 
     --color-primary:#D8D8D8;
     --color-secondary:#bebebe;

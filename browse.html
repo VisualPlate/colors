@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Themes</title>
+    <title>Browse Themes</title>
     <link rel="stylesheet" href="assets/css/dark.css" id="colortheme">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -19,23 +19,22 @@
     </div>
     <div class="max1600 row asc jsc jcsb aic w100 h500p general-margin">
         <div class="col general-padding">
-            <h1 class="fs42">Colors (beta)</h1>
-            <p class="fs28">Simple, modern and clean color themes</p>
+            <h1 class="fs42">Browse Colors</h1>
+            <p class="fs28">Pre-made color themes to speed up design progress</p>
         </div>
     </div>
+    <div class="row jcsb max1200 jsc w100 general-margin general-padding bot-brd top-brd">
+        <div class="row general-gap">
+            <label for="srcTerm" class="general-padding">Sort By</label>
+            <select name="srcTerm" id="srcTerm" class="general-padding">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+        </div>
+        <button type="button" class="general-padding btn-main" id="applyFilters">Apply Filters</button>
+    </div>
+    <div class="container-content max1800 jcc" id="outputHex"></div>
     <br>
-    <div class="max1600 col asc jsc jcc aic w100 general-margin">
-        <div class="row-dyna w100 aic">
-            <div class="content-container col aic jcc" style="cursor: pointer;" onclick="window.location='browse.html'">
-                <h1 class="fs42">Browse Themes</h1>
-                <p class="fs28">Pre-made themes to pick from</p>
-            </div>
-            <div class="content-container col aic jcc" style="cursor: pointer;" onclick="window.location='extractor.html'">
-                <h1 class="fs42">Color Extractor</h1>
-                <p class="fs28">Extract colors from any image</p>
-            </div>
-        </div>
-    </div>
     <div class="row top-brd w100 jcc general-padding">
         <div class="row max1600 w100 h100 jcsb">
             <div>
@@ -51,6 +50,7 @@
         </div>
     </div>
     <br><br><br><br>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
 </html>

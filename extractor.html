@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Themes</title>
+    <title>Color Extractor</title>
     <link rel="stylesheet" href="assets/css/dark.css" id="colortheme">
+    <link rel="stylesheet" href="assets/css/extractor.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+    
     <div class="top-nav w100 bot-brd h60p general-padding">
         <div class="max1600 row jsc aic w100 general-gap h100">
             <a href="index.html"><h3>Home</h3></a>
@@ -17,25 +19,40 @@
             <img src="assets/icons/icon_toLight.svg" alt="change theme" id="btnThemeChange">
         </div>
     </div>
+
+    
     <div class="max1600 row asc jsc jcsb aic w100 h500p general-margin">
         <div class="col general-padding">
-            <h1 class="fs42">Colors (beta)</h1>
-            <p class="fs28">Simple, modern and clean color themes</p>
+            <h1 class="fs42">Color Extractor</h1>
+            <p class="fs28">Make color palettes Quickly and Easily from ANY image</p>
+        </div>
+    </div>
+
+    
+    <div class="row max1600 jsc w100 general-margin general-padding bot-brd top-brd g15">
+        <div class="upload-container aic jcc" id="uploadSection">
+            <input type="file" id="fileInput" accept="image/*">
+            <label for="fileInput" style="pointer-events: none;">Select or Drop Image</label>
+        </div>
+        <img id="imagePreview" alt="Image preview" style="display: none;">
+        <div class="col w100 aic jcc g15">
+            <input type="number" id="colorCount" min="1" max="20" value="5" placeholder="Amount" class="w100 general-padding">
+            <button id="extractBtn" disabled class="w100 h100">Select Image First</button>
+        </div>
+    </div>
+
+    <div class="max1600 row asc jsc jcsb aic w100 general-margin general-padding">
+        <div class="w100 col">
+
+            <div class="loading" id="loading">Wait... </div>
+
+            <div class="palette-section" id="paletteSection" style="display: none;">
+                <h2 class="palette-title">Color Palette</h2>
+                <div class="palette-container" id="paletteContainer"></div>
+            </div>
         </div>
     </div>
     <br>
-    <div class="max1600 col asc jsc jcc aic w100 general-margin">
-        <div class="row-dyna w100 aic">
-            <div class="content-container col aic jcc" style="cursor: pointer;" onclick="window.location='browse.html'">
-                <h1 class="fs42">Browse Themes</h1>
-                <p class="fs28">Pre-made themes to pick from</p>
-            </div>
-            <div class="content-container col aic jcc" style="cursor: pointer;" onclick="window.location='extractor.html'">
-                <h1 class="fs42">Color Extractor</h1>
-                <p class="fs28">Extract colors from any image</p>
-            </div>
-        </div>
-    </div>
     <div class="row top-brd w100 jcc general-padding">
         <div class="row max1600 w100 h100 jcsb">
             <div>
@@ -50,7 +67,12 @@
             </div>
         </div>
     </div>
+    <div id="copiedNotification" class="copied-notification">
+        Copied to Clipboard
+    </div>
     <br><br><br><br>
+
+    <script src="assets/js/extractFromImg.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
 </html>
